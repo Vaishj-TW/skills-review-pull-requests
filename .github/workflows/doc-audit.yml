@@ -19,9 +19,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Get PR diff
+     - name: Get PR diff
         run: |
-          git diff origin/${{ github.event.pull_request.base.ref }}...origin/${{ github.event.pull_request.head.ref }} \
+          git diff ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }} \
             --unified=5 > pr_diff.txt
 
       - name: Install dependencies
