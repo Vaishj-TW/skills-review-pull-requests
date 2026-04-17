@@ -8,7 +8,3 @@ def provision_user(email, role, tenant_id):
 def deprovision_user(user_id):
     """Remove user access when deprovisioned in Okta"""
     pass
-
-def sync_groups(okta_groups):
-    """Map Okta groups to Scrut roles"""
-    pass
