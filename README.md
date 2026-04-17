@@ -2,7 +2,7 @@
 
 # 🎉 Congratulations Vaishj-TW! 🎉
 
-# Fingers crossed this works pls double fingers
+# Fingers crossed this works pls all fingers no more fingers
 
 <img src="https://octodex.github.com/images/welcometocat.png" height="200px" />
 
