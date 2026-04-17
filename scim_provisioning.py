@@ -1,5 +1,4 @@
 # SCIM Provisioning endpoint for Okta
-# Test
 # Allows Okta admins to auto-provision users
 
 def provision_user(email, role, tenant_id):
@@ -8,4 +7,8 @@ def provision_user(email, role, tenant_id):
 
 def deprovision_user(user_id):
     """Remove user access when deprovisioned in Okta"""
+    pass
+
+def sync_groups(okta_groups):
+    """Map Okta groups to Scrut roles"""
     pass
