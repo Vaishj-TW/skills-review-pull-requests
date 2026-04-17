@@ -93,14 +93,17 @@ response = requests.post(
         "content-type": "application/json"
     },
     json={
-        "model": "claude-sonnet-4-20250514",
+        "model": "claude-sonnet-4-6",
         "max_tokens": 2000,
         "messages": [{"role": "user", "content": prompt}]
     }
 )
 
 # Extract Claude's response text
-findings = response.json()["content"][0]["text"]
+resp_json = response.json()
+if "content" not in resp_json:
+    raise Exception(f"Claude API error: {resp_json}")
+findings = resp_json["content"][0]["text"]
 
 # -------------------------------------------------------
 # STEP 5: Write the output file
